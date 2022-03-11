@@ -12,11 +12,10 @@ class SQRServiceTest {
                         "200, 300, 3",
                         "200, 300, 5",
                         "-1, -3, 5"})
-    void doesCorrectlyFind(int start, int end, int expected) {
-        int[] Array1 = Main.fillArray(start, end);
-        int[] Array2 = Main.sqrNum(10,99);
+    void doesCorrectlyFind(int firstNumber, int lastNumber, int expected) {
         SQRService service = new SQRService();
-        int actual = service.countEquals(Array1, Array2);
+        int actual = service.findSqrInArea(firstNumber, lastNumber);
         assertEquals(expected,actual);
     }
+
 }
