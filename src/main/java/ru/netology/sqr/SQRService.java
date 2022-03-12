@@ -2,17 +2,14 @@ package ru.netology.sqr;
 
 public class SQRService {
     public int findSqrInArea(int firstNumber, int lastNumber) {
-        int start = 10;
-        int end = 99;
+        int sqr;
         int counter = 0;
-        int[] arraySqr = new int[(end - start) + 1];
 
-        for (int i = 0; i < arraySqr.length; i++) {
-            arraySqr[i] = start * start;
-            if (arraySqr[i] >= firstNumber & arraySqr[i] <= lastNumber) {
+        for (int i = 10; i <= 99; i++) {
+             sqr = i*i;
+            if (sqr >= firstNumber && sqr <= lastNumber) {
                 counter++;
-            }
-            start++;
+            };
         }
 
         return counter;
